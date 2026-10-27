@@ -1,0 +1,42 @@
+{
+  "sampling_seconds": 1.0,
+  "nominal_capacity_ah": 100.0,
+  "start_soc_pct": 88.0,
+  "discharge_current_positive": true,
+  "max_rows": 150000,
+  "parameter_filter": {
+    "r0_mohm": 0.75,
+    "r1_mohm": 0.40,
+    "tau_s": 40.0,
+    "sigma_measurement_mv": 5.0,
+    "initial_sigma": {"ocv_mv": 12.0, "r0_mohm": 0.30, "r1_mohm": 0.20, "tau_s": 20.0},
+    "sigma_change_over_100s": {"ocv_mv": 2.0, "r0_mohm": 0.05, "r1_mohm": 0.05, "tau_s": 4.0},
+    "step_min_a": 5.0,
+    "step_c_rate": 0.1,
+    "polarization_window_s": 60.0,
+    "rest_current_a": 1.0,
+    "rest_c_rate": 0.01,
+    "deep_rest_seconds": 300.0,
+    "mode_q_multipliers": {
+      "step": [0.01, 20.0, 0.1, 0.1],
+      "polarization": [0.05, 0.1, 10.0, 10.0],
+      "steady": [0.1, 0.1, 0.1, 0.1],
+      "rest_early": [0.05, 0.01, 5.0, 5.0],
+      "rest_late": [5.0, 0.01, 0.01, 0.01]
+    },
+    "mode_update_mask": {
+      "step": [false, true, false, false],
+      "polarization": [false, false, true, true],
+      "steady": [false, false, false, false],
+      "rest_early": [false, false, true, true],
+      "rest_late": [true, false, false, false]
+    }
+  },
+  "soc_filter": {
+    "sigma_measurement_mv": 7.0,
+    "initial_sigma_soc_pct": 12.0,
+    "initial_sigma_polarization_mv": 12.0,
+    "sigma_process_soc_pct_per_step": 0.015,
+    "sigma_process_polarization_mv_per_step": 0.4
+  }
+}

@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+env/
+
+# 测试缓存
+.pytest_cache/
+.coverage
+htmlcov/
+
+# 数据与中间产物（真实电池数据不纳入版本库）
+data_sources/_downloads/
+*.mat
+*.xlsx
+*.xls
+
+# 输出（可按需单独提交报告）
+outputs/
+*.log
+
+# 系统
+.DS_Store
+Thumbs.db

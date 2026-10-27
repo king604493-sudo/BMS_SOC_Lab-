@@ -1,0 +1,8 @@
+[server]
+address = "127.0.0.1"
+port = 8501
+headless = false
+maxUploadSize = 1000
+
+[browser]
+gatherUsageStats = false
